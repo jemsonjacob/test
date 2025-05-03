@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/screens/signin.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -40,7 +41,25 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 208, 185, 243),
-      appBar: AppBar(title: Text('Home'), automaticallyImplyLeading: false),
+      appBar: AppBar(
+        title: Text('Home'),
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignInPage();
+                  },
+                ),
+              );
+            },
+          ),
+        ],
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: SizedBox(

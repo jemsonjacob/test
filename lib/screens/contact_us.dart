@@ -94,6 +94,10 @@ class ContactUs extends StatelessWidget {
                                 duration: Duration(seconds: 1),
                               ),
                             );
+                            _emailController.clear();
+                            _nameController.clear();
+                            _subjectController.clear();
+                            _messageController.clear();
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
