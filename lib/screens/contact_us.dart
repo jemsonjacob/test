@@ -16,7 +16,7 @@ class ContactUs extends StatelessWidget {
         title: Text('Contact Us'),
         automaticallyImplyLeading: false,
       ),
-      //backgroundColor: const Color.fromARGB(255, 208, 185, 243),
+      backgroundColor: const Color.fromARGB(255, 208, 185, 243),
       body: SafeArea(
         child: Center(
           child: Card(
